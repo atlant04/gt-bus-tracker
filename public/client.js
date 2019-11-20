@@ -31,5 +31,8 @@ var lon = -84.39192
 var marker = L.marker([lat, lon]).addTo(mymap)
 
 setInterval(() => {
-    marker.setLatLng([lat += 0.00001, lon += 0.00001])
+    marker.setLatLng([lat += 0.00002, lon += 0.00002])
+    if(lat > 33.78) {
+        marker.setLatLng([33.77406, -84.39192])
+    }
 }, 100)
